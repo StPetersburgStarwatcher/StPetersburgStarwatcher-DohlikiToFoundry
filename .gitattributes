@@ -1,0 +1,6 @@
+* text=auto
+# compendium packs are LevelDB databases: never touch their bytes
+packs/** binary
+*.webp binary
+*.png binary
+*.jpg binary

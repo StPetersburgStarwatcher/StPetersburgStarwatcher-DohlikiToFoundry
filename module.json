@@ -1,0 +1,220 @@
+{
+  "id": "tokyostargazer-vtmbuilder",
+  "title": "TokyoStargazer’s VTMBuilder",
+  "description": "Everything from Dark Gifts: Disciplines Restored (Disciplines, Blood Sorcery, clans, predator types, creatures, rules), plus the Merits, Flaws and Backgrounds used by VTM Builder: the V5 Corebook and supplements (Players Guide, Children of the Blood, Forbidden Religions, Live from the Succubus Club, Blood-Stained Love, Gehenna War, In Memoriam) and V20 / Revised-era entries, in the same format. Clans carry this chronicle’s bane choices; a house-rules journal explains them. Use it instead of Dark Gifts: Disciplines Restored, not alongside it.",
+  "version": "1.0.8",
+  "url": "https://github.com/StPetersburgStarwatcher/StPetersburgStarwatcher-DohlikiToFoundry",
+  "manifest": "https://github.com/StPetersburgStarwatcher/StPetersburgStarwatcher-DohlikiToFoundry/releases/latest/download/module.json",
+  "download": "https://github.com/StPetersburgStarwatcher/StPetersburgStarwatcher-DohlikiToFoundry/releases/download/v1.0.8/module.zip",
+  "authors": [
+    {
+      "name": "TokyoStargazer"
+    },
+    {
+      "name": "Dark Gifts: Disciplines Restored by Vitus (book) and its Foundry port"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "wod5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.3"
+        }
+      }
+    ]
+  },
+  "packs": [
+    {
+      "name": "disciplines",
+      "label": "VTMB: Disciplines",
+      "path": "packs/v1.0.7/disciplines",
+      "type": "Item",
+      "system": "wod5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "blood-sorcery",
+      "label": "VTMB: Blood Sorcery",
+      "path": "packs/v1.0.7/blood-sorcery",
+      "type": "Item",
+      "system": "wod5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "advantages",
+      "label": "VTMB: Merits, Flaws & Backgrounds",
+      "path": "packs/v1.0.7/advantages",
+      "type": "Item",
+      "system": "wod5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "rules",
+      "label": "VTMB: Rules & Lore",
+      "path": "packs/v1.0.7/rules",
+      "type": "JournalEntry",
+      "system": "wod5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "clans",
+      "label": "VTMB: Clans",
+      "path": "packs/v1.0.7/clans",
+      "type": "Item",
+      "system": "wod5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "predator-types",
+      "label": "VTMB: Predator Types",
+      "path": "packs/v1.0.7/predator-types",
+      "type": "Item",
+      "system": "wod5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "creatures",
+      "label": "VTMB: Creatures of the World of Darkness",
+      "path": "packs/v1.0.7/creatures",
+      "type": "Actor",
+      "system": "wod5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "TokyoStargazer’s VTMBuilder",
+      "sorting": "m",
+      "color": "#1f3a2c",
+      "packs": [
+        "clans",
+        "predator-types",
+        "disciplines",
+        "blood-sorcery",
+        "advantages",
+        "creatures",
+        "rules"
+      ]
+    }
+  ],
+  "esmodules": [
+    "scripts/vtmbuilder.js",
+    "scripts/portraits.js"
+  ],
+  "flags": {
+    "wod5e": {
+      "customDisciplines": [
+        {
+          "id": "bardo",
+          "label": "Bardo"
+        },
+        {
+          "id": "chimerstry",
+          "label": "Chimerstry"
+        },
+        {
+          "id": "daimonion",
+          "label": "Daimonion"
+        },
+        {
+          "id": "dementation",
+          "label": "Dementation"
+        },
+        {
+          "id": "flight",
+          "label": "Flight"
+        },
+        {
+          "id": "melpominee",
+          "label": "Melpominee"
+        },
+        {
+          "id": "mytherceria",
+          "label": "Mytherceria"
+        },
+        {
+          "id": "obtenebration",
+          "label": "Obtenebration"
+        },
+        {
+          "id": "quietusanimae",
+          "label": "Quietus (Animae)"
+        },
+        {
+          "id": "quietuscruciatus",
+          "label": "Quietus (Cruciatus)"
+        },
+        {
+          "id": "quietussanguinis",
+          "label": "Quietus (Sanguinis)"
+        },
+        {
+          "id": "serpentis",
+          "label": "Serpentis"
+        },
+        {
+          "id": "spiritus",
+          "label": "Spiritus"
+        },
+        {
+          "id": "temporis",
+          "label": "Temporis"
+        },
+        {
+          "id": "thanatosis",
+          "label": "Thanatosis"
+        },
+        {
+          "id": "valerenhealer",
+          "label": "Valeren (Healer)"
+        },
+        {
+          "id": "valerenwarrior",
+          "label": "Valeren (Warrior)"
+        },
+        {
+          "id": "valerenwatcher",
+          "label": "Valeren (Watcher)"
+        },
+        {
+          "id": "vicissitude",
+          "label": "Vicissitude"
+        }
+      ]
+    }
+  }
+}

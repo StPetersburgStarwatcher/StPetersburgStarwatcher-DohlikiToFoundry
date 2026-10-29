@@ -1,0 +1,36 @@
+# Publish a release on GitHub (tag like v1.0.9) and this builds module.zip and module.json for it.
+# Foundry reads the latest release's module.json to find updates.
+name: Release module
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stamp version and links from the release tag
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          jq --arg v "$VERSION" \
+             --arg u "https://github.com/${GITHUB_REPOSITORY}" \
+             --arg m "https://github.com/${GITHUB_REPOSITORY}/releases/latest/download/module.json" \
+             --arg d "https://github.com/${GITHUB_REPOSITORY}/releases/download/${GITHUB_REF_NAME}/module.zip" \
+             '.version=$v | .url=$u | .manifest=$m | .download=$d' module.json > module.tmp
+          mv module.tmp module.json
+
+      - name: Zip the module
+        run: zip -r module.zip module.json scripts packs assets
+
+      - name: Attach to the release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            module.json
+            module.zip
